@@ -112,12 +112,33 @@ public class Estadisticas {
         System.out.println(pro.get(i).toString());      
         }
         
+         Collections.sort(pro, new ordenarAlfabeticamente());
         
+        System.out.println("");
+        System.out.println("Despues de ordenar por Nombre de Provincia");
+        System.out.println("-------------------------------------------");
         
+        for(int i=0;i<pro.size();i++){
+        System.out.println(pro.get(i).toString());      
+        }
         
+        System.out.println("");
+        System.out.println("Antes de ordenar comunidades");
+        System.out.println("-------------------------------------------");
         
+        for(int i=0;i<comunidades.size();i++){
+        System.out.println(comunidades.get(i).toString()); 
+        }
         
+        Collections.sort(comunidades, new OrdenarComunidadDensidad());
         
+        System.out.println("");
+        System.out.println("despues de ordenar comunidades por densidad");
+        System.out.println("-------------------------------------------");
+        
+        for(int i=0;i<comunidades.size();i++){
+        System.out.println(comunidades.get(i).toString());      
+        }
         
     }
     
